@@ -498,6 +498,7 @@ export default class ImageViewer extends React.Component<Props, State> {
 
           return (
             <ImageZoom
+              ref={this.props.imageZoomRef}
               key={index}
               cropWidth={this.width}
               cropHeight={this.height}

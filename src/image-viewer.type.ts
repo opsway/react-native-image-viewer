@@ -3,6 +3,11 @@ import { Image, ImageURISource, Text, View, ViewStyle } from 'react-native';
 import { simpleStyle } from './image-viewer.style';
 
 export class Props {
+
+  public imageZoomRef?: () => void = () => {
+    //
+  };
+
   /**
    * 是否显示
    */

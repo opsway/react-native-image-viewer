@@ -34,6 +34,13 @@ export default class Main extends Component {
     index: 0,
     modalVisible: true
   };
+  ref = null;
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.ref.resetPosition();
+    }, 5000);
+  }
 
   render() {
     return (
@@ -48,6 +55,7 @@ export default class Main extends Component {
           onRequestClose={() => this.setState({ modalVisible: false })}
         >
           <ImageViewer
+            imageZoomRef={ref = this.ref = ref}
             imageUrls={images}
             index={this.state.index}
             onSwipeDown={() => {
